@@ -1,0 +1,1 @@
+ALTER TABLE "posts" ALTER COLUMN "cover_image" SET DATA TYPE varchar(1000000);
