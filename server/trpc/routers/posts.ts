@@ -157,7 +157,6 @@ export const postsRouter = router({
         slug: z.string().min(1, 'Slug is required'),
         content: z.string().min(1, 'Content is required'),
         excerpt: z.string().optional(),
-        // coverImage field removed
         published: z.boolean().default(false),
         categoryIds: z.array(z.number()).default([]),
       })
@@ -170,7 +169,6 @@ export const postsRouter = router({
           slug: input.slug,
           content: input.content,
           excerpt: input.excerpt || null,
-          // coverImage omitted here
           published: input.published,
           authorId: ctx.userId,
           publishedAt: input.published ? new Date() : null,
@@ -219,7 +217,6 @@ export const postsRouter = router({
         slug: z.string().min(1).optional(),
         content: z.string().min(1).optional(),
         excerpt: z.string().optional(),
-        // coverImage removed here
         published: z.boolean().optional(),
         categoryIds: z.array(z.number()).optional(),
       })
